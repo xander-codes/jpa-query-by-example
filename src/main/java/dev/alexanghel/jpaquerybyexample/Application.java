@@ -1,6 +1,6 @@
 package dev.alexanghel.jpaquerybyexample;
 
-import dev.alexanghel.jpaquerybyexample.controller.PassengerRepository;
+import dev.alexanghel.jpaquerybyexample.repository.PassengerRepository;
 import dev.alexanghel.jpaquerybyexample.model.Passenger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

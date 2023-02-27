@@ -11,8 +11,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @Entity
-public
-class Passenger {
+public class Passenger {
 
     @Id
     @GeneratedValue
@@ -29,9 +28,9 @@ class Passenger {
 
     @Basic(optional = false)
     @Column(nullable = false)
-    private int seatNumber;
+    private Integer seatNumber;
 
-    public Passenger(String firstName, String lastName, int seatNumber) {
+    public Passenger(String firstName, String lastName, Integer seatNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.seatNumber = seatNumber;

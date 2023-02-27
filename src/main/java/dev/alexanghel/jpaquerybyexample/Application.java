@@ -46,11 +46,15 @@ public class Application implements CommandLineRunner {
         ExampleMatcher exampleMatcher = ExampleMatcher.matchingAll()
                 .withMatcher("firstName", ExampleMatcher.GenericPropertyMatchers.endsWith().ignoreCase())
                 .withMatcher("lastName", ExampleMatcher.GenericPropertyMatchers.startsWith().ignoreCase())
-                .withIgnorePaths("firstName")
-                .withIgnorePaths("seatNumber");
+//                .withIgnorePaths("firstName")
+//                .withIgnorePaths("seatNumber")
+                ;
 
-        Example<Passenger> example = Example.of(new Passenger(null, "b", 8888888),
-                exampleMatcher);
+        // new Passesnger comes from the client/gui/wht
+        Example<Passenger> example = Example.of(
+                new Passenger(null, "b", null),
+                exampleMatcher
+        );
 
         List<Passenger> passengers = passengerRepository.findAll(example);
 
